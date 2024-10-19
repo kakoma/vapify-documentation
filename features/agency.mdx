@@ -1,97 +1,26 @@
 ---
-title: 'Agency Management'
-description: 'Learn how to preview changes locally'
+title: Agency Management
+description: 'Manage your agency settings in Vapify.'
 ---
 
-<Info>
-  **Prerequisite**: Please install Node.js (version 19 or higher) before proceeding.
-</Info>
+## Overview
 
-Step 1. Install Mintlify on your OS:
+Managing your agency settings is crucial for personalizing the Vapify platform to reflect your brand. Follow these steps to configure your agency settings effectively.
 
-<CodeGroup>
+### Configure Agency Name, Logo, and Favicon
 
-```bash npm
-npm i -g mintlify
-```
+![Agency Settings Screen](/images/quickstart-agency-settings.png)
 
-```bash yarn
-yarn global add mintlify
-```
+Begin by navigating to **Agency > General**. Update the **Agency Name** field with your agency’s name. Then, upload your agency logo and favicon to ensure the platform aligns with your branding. Click "Save Agency Settings," and log out and back in to see the changes.
 
-</CodeGroup>
+### Configure Subdomain (Starter, Business, or Pro Plan)
 
-Step 2. Go to the docs are located (where you can find `mint.json`) and run the following command:
+For those on the Starter, Business, or Pro Plan, you can set up a custom subdomain. Follow the instructions to create a **CNAME record** for your subdomain. After setting up and waiting for propagation (up to 48 hours), click "Verify Domain" to confirm the setup. You’ll receive an email notification once your subdomain is ready. In the meantime, you can access the platform at **app.vapify.agency**.
 
-```bash
-mintlify dev
-```
+### Configure Email Address
 
-The documentation website is now available at `http://localhost:3000`.
+To ensure emails from the platform come from your agency's email, select either **Postmark** or **Mailgun** and enter the API key. If using SMTP, provide the necessary details (username, password, SMTP server hostname, and port). If you're using **Google Workspace**, generate an **app password** instead of using your Google password, and enable "Less Secure Apps" in your settings.
 
-### Custom Ports
+Your agency management setup is now complete!
 
-Mintlify uses port 3000 by default. You can use the `--port` flag to customize the port Mintlify runs on. For example, use this command to run in port 3333:
-
-```bash
-mintlify dev --port 3333
-```
-
-You will see an error like this if you try to run Mintlify in a port that's already taken:
-
-```md
-Error: listen EADDRINUSE: address already in use :::3000
-```
-
-## Mintlify Versions
-
-Each CLI is linked to a specific version of Mintlify. Please update the CLI if your local website looks different than production.
-
-<CodeGroup>
-
-```bash npm
-npm i -g mintlify@latest
-```
-
-```bash yarn
-yarn global upgrade mintlify
-```
-
-</CodeGroup>
-
-## Deployment
-
-<Tip>
-  Unlimited editors available under the [Pro
-  Plan](https://mintlify.com/pricing) and above.
-</Tip>
-
-You should see the following if the deploy successfully went through:
-
-<Frame>
-  <img src="/images/checks-passed.png" style={{ borderRadius: '0.5rem' }} />
-</Frame>
-
-## Troubleshooting
-
-Here's how to solve some common problems when working with the CLI.
-
-<AccordionGroup>
-  <Accordion title="Mintlify is not loading">
-    Update to Node v18. Run `mintlify install` and try again.
-  </Accordion>
-  <Accordion title="No such file or directory on Windows">
-Go to the `C:/Users/Username/.mintlify/` directory and remove the `mint`
-folder. Then Open the Git Bash in this location and run `git clone
-https://github.com/mintlify/mint.git`.
-
-Repeat step 3.
-
-  </Accordion>
-  <Accordion title="Getting an unknown error">
-    Try navigating to the root of your device and delete the ~/.mintlify folder.
-    Then run `mintlify dev` again.
-  </Accordion>
-</AccordionGroup>
-
-Curious about what changed in a CLI version? [Check out the CLI changelog.](/changelog/command-line)
+---

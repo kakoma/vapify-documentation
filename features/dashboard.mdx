@@ -1,97 +1,27 @@
 ---
-title: 'Dashboard'
-description: 'Learn how to preview changes locally'
+title: Dashboard
+description: 'Monitor your agency’s performance with key metrics at a glance.'
 ---
 
-<Info>
-  **Prerequisite**: Please install Node.js (version 19 or higher) before proceeding.
-</Info>
+## Dashboard Overview
 
-Step 1. Install Mintlify on your OS:
+The dashboard provides a comprehensive overview of your agency's performance, displaying key metrics through three informative bar charts. 
 
-<CodeGroup>
+![Dashboard Screen](/images/vapify-dashboard.png)
 
-```bash npm
-npm i -g mintlify
-```
+### Key Metrics
 
-```bash yarn
-yarn global add mintlify
-```
+1. **Total Minutes per Day**
+   - This chart displays the total minutes of voice calls processed each day. For agencies, the data combines all subaccounts, giving you a holistic view of usage. For subaccount users, it focuses solely on their specific subaccount.
 
-</CodeGroup>
+2. **Total Call Count per Day**
+   - This chart shows the total number of calls made each day. Again, agency dashboards aggregate data from all subaccounts, while subaccount dashboards display the count for that particular subaccount.
 
-Step 2. Go to the docs are located (where you can find `mint.json`) and run the following command:
+3. **Average Call Duration per Day**
+   - This chart illustrates the average duration of calls processed each day. Agencies will see an aggregate of average durations across all subaccounts, while subaccount users will only see their respective data.
 
-```bash
-mintlify dev
-```
+### Insights
 
-The documentation website is now available at `http://localhost:3000`.
+Utilizing these charts, you can quickly assess the performance of your agency or individual subaccounts. The visual representation of data helps in identifying trends and making informed decisions to enhance service delivery.
 
-### Custom Ports
-
-Mintlify uses port 3000 by default. You can use the `--port` flag to customize the port Mintlify runs on. For example, use this command to run in port 3333:
-
-```bash
-mintlify dev --port 3333
-```
-
-You will see an error like this if you try to run Mintlify in a port that's already taken:
-
-```md
-Error: listen EADDRINUSE: address already in use :::3000
-```
-
-## Mintlify Versions
-
-Each CLI is linked to a specific version of Mintlify. Please update the CLI if your local website looks different than production.
-
-<CodeGroup>
-
-```bash npm
-npm i -g mintlify@latest
-```
-
-```bash yarn
-yarn global upgrade mintlify
-```
-
-</CodeGroup>
-
-## Deployment
-
-<Tip>
-  Unlimited editors available under the [Pro
-  Plan](https://mintlify.com/pricing) and above.
-</Tip>
-
-You should see the following if the deploy successfully went through:
-
-<Frame>
-  <img src="/images/checks-passed.png" style={{ borderRadius: '0.5rem' }} />
-</Frame>
-
-## Troubleshooting
-
-Here's how to solve some common problems when working with the CLI.
-
-<AccordionGroup>
-  <Accordion title="Mintlify is not loading">
-    Update to Node v18. Run `mintlify install` and try again.
-  </Accordion>
-  <Accordion title="No such file or directory on Windows">
-Go to the `C:/Users/Username/.mintlify/` directory and remove the `mint`
-folder. Then Open the Git Bash in this location and run `git clone
-https://github.com/mintlify/mint.git`.
-
-Repeat step 3.
-
-  </Accordion>
-  <Accordion title="Getting an unknown error">
-    Try navigating to the root of your device and delete the ~/.mintlify folder.
-    Then run `mintlify dev` again.
-  </Accordion>
-</AccordionGroup>
-
-Curious about what changed in a CLI version? [Check out the CLI changelog.](/changelog/command-line)
+---

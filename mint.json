@@ -45,20 +45,10 @@
       "pages": [
         "features/agency",
         "features/dashboard",
+        "features/assistants",
         "features/call-logs",
         "features/billing-and-usage",
-        "features/platform"
-      ]
-    },
-    {
-      "group": "Essentials",
-      "pages": [
-        "essentials/markdown",
-        "essentials/code",
-        "essentials/images",
-        "essentials/settings",
-        "essentials/navigation",
-        "essentials/reusable-snippets"
+        "features/subaccount"
       ]
     }
   ]

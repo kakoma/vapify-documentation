@@ -1,0 +1,78 @@
+---
+title: Sub Account Configuration
+description: 'Set up and manage your subaccounts efficiently.'
+---
+
+## Overview
+
+Setting up subaccounts allows you to manage clients and their associated voice assistants effectively. Follow these steps for a successful configuration.
+
+### Sub Accounts Configuration
+
+![Sub Accounts Configuration Screen](/images/quickstart-subaccount-config.png)
+
+To set up your subaccounts, enter your **Vapi API private key** and click "Save Settings." If the key is correct, all assistants associated with that Vapi account will be retrieved and linked to this subaccount.
+
+Here’s how to get your **Vapi.ai private key**:
+
+![Getting Vapi.ai key screen](/images/quickstart-vapi-private-key.png)
+
+### Assistant Activation 
+
+Now that all Vapi.ai assistants have been retrieved, it’s time to activate them. Go to **Platform > Assistants** and activate each assistant you want to have live for that subaccount. Be aware that once a subaccount goes live, you cannot change which assistants are active.
+
+### Assistant Pricing Setup 
+
+With your assistants are activated, navigate to **Agency > Sub Accounts** and select each assistant. Set the **price per minute** that you charge your client, ensuring it's higher than what vapi.ai is charging you per minute for that assistant.
+
+### Manual Payment Mode 
+By default, your agency account is setup to automatically collect payments for you from your client using Stripe if you specify a client monthly fee. The client will see an invoice with your agency's details.
+Also, the client will be able to topup credit on their account so that that credit is used to process voice minutes. 
+In case you would like to receive payments from your client outside the system and then login and update their subscription end date, subscription status and update their credit balance yourself, you'll need to reach out to support so that "Manual Payment Mode" is activated for your account. 
+
+
+### Current Number of Agents
+
+This displays the current number of active assistants associated with this sub account.
+
+### Current Balance
+
+The current balance reflects how much credit your client has topped up. Clients can add credit by navigating to **Billing and Usage**, selecting **Top Up Credit**, choosing an amount and then making a payment. This money is automatically added to your Stripe account.
+
+### Current Credits
+
+Current credits indicate the number of remaining credits manually assigned by you to this particular sub account. Credits do not expire; however, they are consumed as voice minutes are processed. Credits are utilized before the client's balance is spent.
+
+### Monthly Plan Status
+
+The monthly plan status shows whether the sub account has an active or inactive subscription.
+
+### Monthly Plan Expiry Date
+
+This section displays the expiry date of the sub account's current plan.
+
+### Sub Account Users
+
+The table of sub account users lists all users currently configured under this sub account, allowing you to manage their access and roles effectively.
+
+## Going Live for Your Client
+
+To turn on live billing for your client, you need to follow these steps:
+
+### Step 1: Activate Billing
+
+To activate billing for your client, you must ensure you have agency credit. Navigate to **Billing & Usage** and check your agency credit. Otherwise, select an amount to add to your agency's credit balance.
+
+### Step 2: Set Billing Start Date
+
+After topping up your agency credit (or if you already have credit), select a **Billing Start Date** below. Here’s what you need to know:
+
+- **Effective Date:** Billing will apply to all calls starting from the date you select. You can choose a date in the past or in the future if needed.
+  
+- **One-Time Setup:** The **Billing Start Date** can only be set once for each sub-account. Please choose this date carefully.
+
+- **Activation:** You cannot 'Start Billing' until you have selected a **Billing Start Date** and topped up your agency's credit in **Billing & Usage**.
+
+> **Note:** Once the **Billing Start Date** is set, it cannot be changed. Ensure the date is correct before proceeding to avoid any billing issues.
+
+By completing these steps, your client’s subaccount will be ready to go live, ensuring that billing is applied correctly from the selected date onward.
