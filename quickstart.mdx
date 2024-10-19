@@ -1,40 +1,114 @@
----
-title: Quickstart Guide
-description: 'Follow these steps to set up your Vapify agency and get started with voice assistants!'
----
+# Quick Start Guide
 
-## Quickstart Guide
+## Step 1: Agency Settings Configuration 
 
-To help you get up and running with Vapify, follow these five essential steps:
 
-### Step 1: Agency Settings Configuration
-Start by configuring your agency settings:
-- **Navigate to the Agency Settings** in your dashboard. Here, you can upload your agency logo and set up custom branding to reflect your business identity.
-- **Configure core settings**, including payment methods, notification preferences, and any specific settings that align with your agency’s operations. This ensures that you’re set up for seamless client interactions.
+### Configure Agency Name, Logo, and Favicon
 
-### Step 2: Sub Accounts Configuration
-Once your agency settings are in place:
-- **Go to the Sub Accounts section** to create individual accounts for your clients. This allows them to access and manage their own voice assistants within your platform.
-- **Set specific permissions** for each subaccount, tailoring access and features based on your clients’ needs. This customization enhances their experience and ensures they have the necessary tools at their disposal.
+![Agency Settings Screen](/images/quickstart-agency-settings.png)
 
-### Step 3: Assistant Activation
-Now it's time to activate your voice assistants:
-- **In the Manage Assistants area**, you can create and configure the voice assistants you’ll be deploying. Each assistant can be customized with specific responses and functionalities.
-- **Set the activation status** to "active" for each assistant that is ready to be used. This ensures that they are live and operational, ready to assist your clients.
+When you get started, go to **Agency > General** to begin the configuration process. First, update the **Agency Name** field with your agency’s name. Next, upload your agency logo and favicon. These steps personalize the platform to reflect your agency's branding. Click "Save Agency Settings." Once you log out and back in, the changes will reflect.
 
-### Step 4: Assistant Pricing Setup
-After configuring your assistants:
-- **Access the Pricing section** to set up how you will charge for voice assistant services. You can implement per-minute charges and other pricing models that suit your business strategy.
-- **Ensure your pricing aligns** with your agency’s business model and client expectations. Clear pricing structures will help you maintain transparency and trust with your clients.
+### Configure Subdomain
+If you're on the Starter, Business, or Pro Plan, you can set up a custom subdomain for your platform. Go to **Agency > General**, and follow the instructions to create a **CNAME record** for your subdomain. After the CNAME record has been set up and propagated (this can take up to 48 hours, but often happens sooner), click "Verify Domain" to confirm. Once verified, your subdomain will be mapped to your agency. This process may take a few hours, and you'll receive an email notification when it’s ready. In the meantime, you can continue using the platform at **app.vapify.agency**.
 
-### Step 5: Going Live
-Finally, prepare to launch your services:
-- **Review all configurations** to ensure everything is set up correctly and functions as intended. This includes double-checking agency settings, subaccounts, and assistant configurations.
-- **Launch your voice assistants** and start engaging with clients. This is where you can demonstrate the value of your services and begin building long-lasting relationships.
+### Configure Email Address
+Next, configure your email settings to ensure emails from the platform (e.g., password reset, new user notifications) appear to come from your agency's email address. Choose either **Postmark** or **Mailgun**, and enter the corresponding API key. Alternatively, you can select **SMTP** and provide the necessary details (username, password, SMTP server hostname, and port). If using **Google Workspace**, generate an **app password** rather than using your Google password. Follow this guide to create an app password and enable "Less Secure Apps" in your Google account settings for SMTP to work.
 
-## Review Billing and Usage Reports
-After going live, it’s essential to monitor performance:
-- **Regularly check the Billing and Usage reports** to track activity, revenue, and resource consumption. This will help you identify trends and areas for improvement.
-- If everything is functioning well, head back to the **Sub Accounts section** to invite your clients to join and utilize their newly activated voice assistants.
+Your **Agency Setup (Step One)** is now complete. Let's move on to **Step Two**.
 
 ---
+
+## Step 2: Sub Accounts Configuration
+
+![Sub Accounts Configuration Screen](/images/quickstart-subaccount-config.png)
+
+Now let's proceed with setting up your subaccounts. Enter your **Vapi API private key** and click "Save Settings." If you’ve entered the correct **VAPI.ai private API key**, all the assistants associated with that Vapi account will be retrieved and linked to this subaccount.
+
+Here’s how to get your **Vapi.ai private key**:
+
+![Getting Vapi.ai key screen](/images/quickstart-vapi-private-key.png)
+
+
+With **Step Two** done, let's move on to **Step Three**.
+
+---
+
+## Step 3: Assistant Activation 
+
+![Platform Assistants Screen](/images/vapify-assistants-screen.png)
+
+Now that all the Vapi.ai assistants have been retrieved, it’s time to activate them. Go to **Platform > Assistants** and activate every assistant you want to have live for that subaccount. This step helps ensure that you stay within the limits of the number of assistants allowed by your plan.
+
+Note: Once a subaccount goes live (more on this in **Step Five**), you cannot change which assistants are active. Be sure to activate every assistant you’d like to be live.
+
+---
+
+## Step 4: Pricing Setup 
+
+![Sub Accounts Assistants Pricing Screen](/images/vapify-assistants-pricing.png)
+
+### Assistant Per Minute Pricing Setup
+With your assistants activated, go to **Agency > Sub Accounts** and select each assistant. For each assistant, set the **price per minute** that you charge your client. Ensure this price is higher than what **Vapi.ai** charges you for that assistant. 
+
+If you update an assistant’s price per minute in Vapi, you will need to update it here to avoid charging your client less than what Vapi charges you.
+
+### Client Monthly Pricing Setup
+If you’re on the Starter, Business, or Pro Plan, you can also set the **monthly pricing** for your client. This amount will be automatically charged to your client via **Stripe** and paid into the Stripe account you configured earlier.
+
+### Manual Payment Mode 
+By default, your agency account is setup to automatically collect payments for you from your client using Stripe if you specify a client monthly fee. The client will see an invoice with your agency's details.
+Also, the client will be able to topup credit on their account so that that credit is used to process voice minutes. 
+In case you would like to receive payments from your client outside the system and then login and update their subscription end date, subscription status and update their credit balance yourself, you'll need to reach out to support so that "Manual Payment Mode" is activated for your account. 
+
+
+---
+
+## Step 5: Going Live  
+
+![Sub Account Go Live Screen](/images/vapify-subaccount-golive.png)
+
+With pricing set up, all that’s left is to set a **Go Live** date for the subaccount. This is the date when pricing will start being applied. You can select a past or future date, but it can only be set once. 
+
+Note: You cannot change the assistants after the go-live date, and only call records from that date onward will be processed by Vapify. Be sure to select an appropriate date for your client’s subaccount to go live.
+
+---
+
+## Step 6: Review Reports 
+
+![Billing Summary Screen](/images/vapify-billing-summary.png)
+
+After going live, call records will be retrieved from Vapi for that subaccount, and the pricing you set will be applied. Depending on the volume of records, this may take a few hours.
+
+To view the call records and see how the pricing has been applied, go to **Billing & Usage**.
+
+- **Billing Summary**: View all payments made, including subscriptions and credit top-ups.
+
+![Voice Usage Revenue Screen](/images/vapify-voice-usage.png)
+
+- **Voice Usage Revenue**: See pricing applied per call, including:
+  - Call duration
+  - Your charge per minute
+  - Total charge
+  - **Vapi.ai Total Cost**
+  - **Vapify Total Cost**
+  - Your **profit**
+
+For **subaccount users**, the **Voice Usage Revenue** tab shows a simplified version, hiding:
+  - **Vapi.ai Total Cost**
+  - **Vapify Total Cost**
+  - **Profit**
+
+This ensures subaccounts focus only on their usage, without backend cost details.
+
+---
+
+## Step 7: Invite Your Client
+
+Once you're happy with the setup, invite your client to the platform. Go to **Agency > Sub Account** and click "New Sub Account User." Enter your client’s name, email, and role (either Administrator or Member). If the subaccount requires top-ups, only the Administrator can handle them.
+
+Once you click "Invite User," your client will receive an email from your agency (if you configured the email in **Step One**) and will be able to log in.
+
+To preview what your client will see, click **View as Sub Account** at the top of the screen.
+
+That’s it! Feel free to explore other aspects of Vapify under **Platform Features**.
