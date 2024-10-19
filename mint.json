@@ -1,29 +1,29 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "Vapify Documentation",
   "logo": {
     "dark": "/logo/dark.svg",
     "light": "/logo/light.svg"
   },
   "favicon": "/favicon.svg",
   "colors": {
-    "primary": "#0D9373",
-    "light": "#07C983",
-    "dark": "#0D9373",
+    "primary": "#CC6CE5",
+    "light": "#EAB8E4",
+    "dark": "#A45B9E",
     "anchors": {
-      "from": "#0D9373",
-      "to": "#07C983"
+        "from": "#A45B9E",   
+        "to": "#EAB8E4"      
     }
   },
   "topbarLinks": [
     {
       "name": "Support",
-      "url": "mailto:hi@mintlify.com"
+      "url": "mailto:support@info.vapify.agency"
     }
   ],
   "topbarCtaButton": {
-    "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "name": "Login",
+    "url": "https://app.vapify.agency"
   },
   "tabs": [
     {
@@ -53,8 +53,17 @@
       "group": "Get Started",
       "pages": [
         "introduction",
-        "quickstart",
-        "development"
+        "quickstart"
+      ]
+    },
+    {
+      "group": "Platform Features",
+      "pages": [
+        "features/agency",
+        "features/dashboard",
+        "features/call-logs",
+        "features/billing-and-usage",
+        "features/platform"
       ]
     },
     {
