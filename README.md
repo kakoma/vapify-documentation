@@ -21,6 +21,10 @@ Run the following command at the root of your documentation (where mint.json is)
 ```
 mintlify dev
 ```
+Or to run it on port 3333, run:
+```
+mintlify dev --port 3333
+```
 
 ### Publishing Changes
 
